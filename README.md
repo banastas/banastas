@@ -1,9 +1,3 @@
-___.                                  __                 
-\_ |__ _____    ____ _____    _______/  |______    ______
- | __ \\__  \  /    \\__  \  /  ___/\   __\__  \  /  ___/
- | \_\ \/ __ \|   |  \/ __ \_\___ \  |  |  / __ \_\___ \ 
- |___  (____  /___|  (____  /____  > |__| (____  /____  >
-     \/     \/     \/     \/     \/            \/     \/ 
 <!--
 **banastas/banastas** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
