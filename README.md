@@ -1,4 +1,11 @@
-### Hi there 👋
+```
+___.                                  __                                          
+\_ |__ _____    ____ _____    _______/  |______    ______     ____  ____   _____  
+ | __ \\__  \  /    \\__  \  /  ___/\   __\__  \  /  ___/   _/ ___\/  _ \ /     \ 
+ | \_\ \/ __ \|   |  \/ __ \_\___ \  |  |  / __ \_\___ \    \  \__(  <_> )  Y Y  \
+ |___  (____  /___|  (____  /____  > |__| (____  /____  > /\ \___  >____/|__|_|  /
+     \/     \/     \/     \/     \/            \/     \/  \/     \/            \/ 
+```
 
 <!--
 **banastas/banastas** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -11,6 +18,5 @@ Here are some ideas to get you started:
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about ...
 - 📫 How to reach me: ...
-- 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
