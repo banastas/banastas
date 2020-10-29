@@ -5,7 +5,7 @@
     <xsl:strip-space elements="*"/>
 
     <xsl:template match="/at:feed">
-      <xsl:text>### <a href="https://banastas.com/blog"><xsl:value-of select="@href"/>banastas.com/blog</a></xsl:text>
+      <xsl:text>### banastas.com/blog</xsl:text>
         <xsl:text>&#xa;&#xa;</xsl:text>
         <xsl:apply-templates/>
     </xsl:template>
