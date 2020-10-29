@@ -1,4 +1,4 @@
-### Recent Blog Posts
+### banastas.com/blog
 
   * [Repeat Recipes&#58; Cajun Chicken](https://banastas.com/blog/cajun-chicken.html)
   * [The VFX Industry&#58; Part 2](https://banastas.com/blog/the-vfx-industry-part2.html)
