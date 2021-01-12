@@ -1,5 +1,2 @@
-<a href="https://banastas.com">Pixel Pusher</a> | <a href="https://banastas.blog">Idea Aspirer</a> | <a href="https://deresolute.com">Reality Imprisoner</a>
-
-
-
+<a href="https://banastas.com">banastas.com</a> | <a href="https://banastas.blog">banastas.blog</a> | <a href="https://banastas.photo">banastas.photo</a>
 
