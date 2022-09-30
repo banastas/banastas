@@ -1,4 +1,4 @@
-<a href="https://banastas.photo">banastas.photo</a> | <a href="https://banastas.dev">banastas.dev</a> | <a href="https://banastas.blog">banastas.blog</a>
+<a href="http://banast.as/photo">banast.as/photo</a>  | <a href="http://banast.as/dev">banast.as/dev</a>  |  <a href="http://banast.as/blog">banast.as/blog</a>
 ### banastas.blog
 
   * [Photography Workflow 2022](https://banastas.blog/photo-workflow-2022.html)
