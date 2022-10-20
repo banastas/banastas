@@ -30,7 +30,7 @@ jobs:
       run:  curl https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/9.9.1-7/Saxon-HE-9.9.1-7.jar > saxon.jar
 
     - name: Fetch website Atom Feed
-      run: curl https://banastas.blog/feed.xml > feed.xml 
+      run: curl https://banast.as/blog/feed.xml > feed.xml 
     
     - name: Perform XSL Transformation
       run: java -cp ./saxon.jar net.sf.saxon.Transform -s:feed.xml -xsl:$GITHUB_WORKSPACE/scripts/recent-posts.xslt -o:README_END.md
