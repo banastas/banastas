@@ -1,8 +1,8 @@
 <a href="http://banast.as/photo">banast.as/photo</a>  | <a href="http://banast.as/dev">banast.as/dev</a>  |  <a href="http://banast.as/blog">banast.as/blog</a>
 ### banast.as/blog
 
-  * [DeepSearch: Hasselblad X2D 100C vs. Fujifilm GFX 100 II](https://banast.as/blog/posts/2025-03-24-deepsearch-hasselblad-x2d-100c_vs_fujifilm-gfx-100ii/)
-  * [DeepSearch: Fujifilm GFX100S II vs. Fujifilm GFX 100 II](https://banast.as/blog/posts/2025-03-24-deepsearch-fujifilm-gfx100s-ii_vs_fujifilm-gfx-100ii/)
-  * [DeepSearch: Underground Complex at Giza Pyramids](https://banast.as/blog/posts/2025-03-22-deepsearch-underground-complex-at-giza-pyramids/)
-  * [DeepSearch: Selling Prints on SmugMug](https://banast.as/blog/posts/2025-03-08-deepsearch-selling-prints-on-smugmug/)
-  * [DeepSearch: The Best Place to Sell Prints Online in 2025](https://banast.as/blog/posts/2025-03-07-deepsearch-best-place-to-sell-prints-2025/)
+  * [Flashing a UHD Drive on macOS](https://banast.as/blog/posts/2025-03-01-flashing-uhd-drive-macos/)
+  * [Photography Workflow 2025](https://banast.as/blog/posts/2025-02-10-photo-workflow-2025/)
+  * [MiniDisc™](https://banast.as/blog/posts/2023-01-03-minidisc/)
+  * [Photography Workflow 2022](https://banast.as/blog/posts/2022-01-04-photo-workflow-2022/)
+  * [Recipes: Poulet au citron](https://banast.as/blog/posts/2021-10-27-poulet-au-citron/)
