@@ -2,8 +2,8 @@
 
 ### banast.as/blog
 
-  * [Flashing a UHD Drive on macOS](https://blog.banast.as/posts/2025-03-01-flashing-uhd-drive-macos/)
-  * [Photography Workflow 2022](https://blog.banast.as/posts/2022-01-04-photo-workflow-2022/)
-  * [Kirshbot](https://blog.banast.as/posts/2025-08-30_kirshbot/)
-  * [Photography Workflow 2025](https://blog.banast.as/posts/2025-02-10-photo-workflow-2025/)
-  * [Recipes: Ropa Vieja](https://blog.banast.as/posts/2021-10-05-ropa-vieja/)
+  * [Photography Workflow 2018](https://blog.banast.as/posts/2018-08-24-photo-workflow-2018/)
+  * [How I Infuse](https://blog.banast.as/posts/2020-09-07-how-i-infuse/)
+  * [An Obsession with Formula 1](https://blog.banast.as/posts/2020-09-14-formula-1/)
+  * [The VFX Industry: Part 1](https://blog.banast.as/posts/2020-09-21-the-vfx-industry-part1/)
+  * [Influences: Anthony Bourdain](https://blog.banast.as/posts/2020-09-28-anthony-bourdain/)
