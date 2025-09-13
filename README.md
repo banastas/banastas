@@ -2,8 +2,8 @@
 
 ### banast.as/blog
 
-  * [Flashing a UHD Drive on macOS](https://blog.banast.as/blog/posts/2025-03-01-flashing-uhd-drive-macos/)
-  * [Kirshbot](https://blog.banast.as/blog/posts/2025-08-30_kirshbot/)
-  * [Photography Workflow 2025](https://blog.banast.as/blog/posts/2025-02-10-photo-workflow-2025/)
-  * [MiniDisc™](https://blog.banast.as/blog/posts/2023-01-03-minidisc/)
-  * [Photography Workflow 2022](https://blog.banast.as/blog/posts/2022-01-04-photo-workflow-2022/)
+  * [Flashing a UHD Drive on macOS](https://blog.banast.as/posts/2025-03-01-flashing-uhd-drive-macos/)
+  * [Photography Workflow 2022](https://blog.banast.as/posts/2022-01-04-photo-workflow-2022/)
+  * [Kirshbot](https://blog.banast.as/posts/2025-08-30_kirshbot/)
+  * [Photography Workflow 2025](https://blog.banast.as/posts/2025-02-10-photo-workflow-2025/)
+  * [Recipes: Ropa Vieja](https://blog.banast.as/posts/2021-10-05-ropa-vieja/)
