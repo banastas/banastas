@@ -2,8 +2,8 @@
 
 ### banast.as/blog
 
+  * [Project Preserve Destiny](https://blog.banast.as/posts/2025-10-19_project-preserve-destiny/)
   * [Tron: Ares](https://blog.banast.as/posts/2025-10-18_tron-ares/)
   * [The Universe Doesn't Make Sense](https://blog.banast.as/posts/2025-10-12_the-universe-doesnt-make-sense/)
   * [AI in Physical Production](https://blog.banast.as/posts/2025-10-08_ai-in-physical-production/)
   * [Closet Collection Becomes Open Source Project](https://blog.banast.as/posts/2025-10-07_comics/)
-  * [Stay Hungry, Stay Foolish](https://blog.banast.as/posts/2025-10-05_steve-jobs/)
