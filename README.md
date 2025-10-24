@@ -2,8 +2,8 @@
 
 ### banast.as/blog
 
+  * [When Game Engines Meet Hollywood](https://blog.banast.as/posts/2025-10-22_when-game-engines-meet-hollywood/)
   * [Why 2025 Is the Most Pivotal Year](https://blog.banast.as/posts/2025-10-21_peter-leyden-2025/)
   * [Project Preserve Destiny](https://blog.banast.as/posts/2025-10-19_project-preserve-destiny/)
   * [Tron: Ares](https://blog.banast.as/posts/2025-10-18_tron-ares/)
   * [The Universe Doesn't Make Sense](https://blog.banast.as/posts/2025-10-12_the-universe-doesnt-make-sense/)
-  * [AI in Physical Production](https://blog.banast.as/posts/2025-10-08_ai-in-physical-production/)
