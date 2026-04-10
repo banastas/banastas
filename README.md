@@ -2,8 +2,8 @@
 
 ### banast.as/blog
 
+  * [Build on Your Own Land](https://blog.banast.as/posts/2026-04-07-build-on-your-own-land/)
   * [The Scene Was Staged](https://blog.banast.as/posts/2026-02-14-the-scene-was-staged/)
   * [The VFX Industry: Part 3](https://blog.banast.as/posts/2026-01-31-the-vfx-industry-part3/)
   * [Beneath the Pyramids](https://blog.banast.as/posts/2026-01-23-beneath-the-pyramids/)
   * [Photography Workflow 2026](https://blog.banast.as/posts/2026-01-17-photo-workflow-2026/)
-  * [The Girl in the Jacuzzi](https://blog.banast.as/posts/2026-01-10_the-girl-in-the-jacuzzi/)
