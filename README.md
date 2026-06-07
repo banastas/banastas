@@ -2,8 +2,8 @@
 
 ### banast.as/blog
 
+  * [Action Movies Are Floor Plans Under Stress](https://blog.banast.as/posts/2026-06-06-action-movies-are-floor-plans-under-stress/)
   * [Netflix Lighting Is a Failure to Choose](https://blog.banast.as/posts/2026-05-26-netflix-lighting-is-a-failure-to-choose/)
   * [Friction Is About to Become a Luxury](https://blog.banast.as/posts/2026-04-11-friction-is-about-to-become-a-luxury/)
   * [Build on Your Own Land](https://blog.banast.as/posts/2026-04-07-build-on-your-own-land/)
   * [The VFX Industry: Part 3](https://blog.banast.as/posts/2026-01-31-the-vfx-industry-part3/)
-  * [Photography Workflow 2026](https://blog.banast.as/posts/2026-01-17-photo-workflow-2026/)
