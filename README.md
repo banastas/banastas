@@ -2,8 +2,8 @@
 
 ### banast.as/blog
 
+  * [The Producer Is the Translator Between Worlds](https://blog.banast.as/posts/2026-07-24-the-producer-is-the-translator-between-worlds/)
   * [The Version In Front Of You](https://blog.banast.as/posts/2026-07-17-the-version-in-front-of-you/)
   * [A Decision Is Not Real Until Something Dies](https://blog.banast.as/posts/2026-07-10-a-decision-is-not-real-until-something-dies/)
   * [Notes Are Often Disguised Anxiety](https://blog.banast.as/posts/2026-07-03-notes-are-often-disguised-anxiety/)
   * [The Work Does Not Care What You Meant](https://blog.banast.as/posts/2026-06-26-the-work-does-not-care-what-you-meant/)
-  * [The Smart Room Problem](https://blog.banast.as/posts/2026-06-19-the-smart-room-problem/)
