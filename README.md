@@ -2,8 +2,8 @@
 
 ### banast.as/blog
 
+  * [The Work Can Change the Brief](https://blog.banast.as/posts/2026-10-02-the-work-can-change-the-brief/)
   * [Leave Some of It Unsolved](https://blog.banast.as/posts/2026-09-25-leave-some-of-it-unsolved/)
   * [When the Workaround Becomes the Workflow](https://blog.banast.as/posts/2026-09-18-when-the-workaround-becomes-the-workflow/)
   * [What Calm Is For](https://blog.banast.as/posts/2026-09-11-what-calm-is-for/)
   * [Taste Is a Compression Algorithm](https://blog.banast.as/posts/2026-09-04-taste-is-a-compression-algorithm/)
-  * [Every Medium Refuses Something](https://blog.banast.as/posts/2026-08-28-every-medium-refuses-something/)
