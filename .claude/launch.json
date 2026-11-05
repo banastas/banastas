@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "readme-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "/private/tmp/claude-501/-Users-banastas-GitHub-banastas/d6cd3e58-9cab-4955-adaf-045ac40865b3/scratchpad/site"],
+      "port": 8765
+    }
+  ]
+}
