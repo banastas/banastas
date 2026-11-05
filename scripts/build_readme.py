@@ -34,7 +34,7 @@ BLOG_FEED = "https://blog.banast.as/rss.xml"
 DEV_SITE = "https://dev.banast.as/"
 
 THUMB = (720, 480)  # 3:2, shared by photo and post so the cells line up
-ICON_SIZE = 44      # display width in px; PNGs are stored at 2x
+ICON_SIZE = 58      # display width in px (4 per row in the column); PNGs are stored at 2x
 
 CONTENT_NS = "{http://purl.org/rss/1.0/modules/content/}encoded"
 UA = "banastas-profile-readme (+https://github.com/banastas/banastas)"
