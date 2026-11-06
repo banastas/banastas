@@ -10,6 +10,7 @@ form a single row:
   {{post}}   latest post from blog.banast.as (hero thumbnailed into assets/blog/)
   {{apps}}   Mac app icons from dev.banast.as, each linked to the app's site
 """
+import hashlib
 import html
 import io
 import json
@@ -216,9 +217,11 @@ def apps() -> str:
         file = safe_name(Path(urllib.parse.urlparse(m["icon"]).path).stem, ".png")
         icon_png(urllib.parse.urljoin(DEV_SITE, m["icon"]), ICON_DIR / file)
         keep.add(file)
+        # Content hash in the URL busts GitHub/browser caches when an icon changes.
+        ver = hashlib.sha1((ICON_DIR / file).read_bytes()).hexdigest()[:8]
         verse = haiku.get(url.rstrip("/").lower(), "")
         tip = esc(name + ("\n\n" + verse if verse else "")).replace("\n", "&#10;")
-        links.append(f'<a href="{esc(url)}"><img src="assets/icons/{file}" alt="{esc(name)}" title="{tip}" width="{ICON_SIZE}"></a>')
+        links.append(f'<a href="{esc(url)}"><img src="assets/icons/{file}?v={ver}" alt="{esc(name)}" title="{tip}" width="{ICON_SIZE}"></a>')
     prune(ICON_DIR, keep, "*.png")
 
     return cell(label("dev") + "\n".join(links))
