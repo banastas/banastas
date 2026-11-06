@@ -80,9 +80,11 @@ def thumbnail(src_url: str, dest: Path) -> None:
 
 
 def icon_png(src_url: str, dest: Path) -> None:
-    """Convert a remote app icon to a transparent PNG at 2x display size."""
-    if dest.exists():
-        return
+    """Convert a remote app icon to a transparent PNG at 2x display size.
+
+    Always re-fetched (no exists() check) so icon changes on the site show up;
+    git only commits when the bytes differ.
+    """
     dest.parent.mkdir(parents=True, exist_ok=True)
     img = Image.open(io.BytesIO(fetch(src_url))).convert("RGBA")
     img = img.resize((ICON_SIZE * 2, ICON_SIZE * 2), Image.LANCZOS)
