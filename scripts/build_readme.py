@@ -35,6 +35,7 @@ BLOG_FEED = "https://blog.banast.as/rss.xml"
 DEV_SITE = "https://dev.banast.as/"
 
 THUMB = (720, 480)  # 3:2, shared by photo and post so the cells line up
+HIDDEN_APPS = {"whiterose"}  # icon stems to leave out of the grid for now
 ICON_SIZE = 58      # display width in px (4 per row in the column); PNGs are stored at 2x
 
 CONTENT_NS = "{http://purl.org/rss/1.0/modules/content/}encoded"
@@ -214,7 +215,10 @@ def apps() -> str:
         if url in seen:
             continue
         seen.add(url)
-        file = safe_name(Path(urllib.parse.urlparse(m["icon"]).path).stem, ".png")
+        stem = Path(urllib.parse.urlparse(m["icon"]).path).stem
+        if stem in HIDDEN_APPS:
+            continue
+        file = safe_name(stem, ".png")
         icon_png(urllib.parse.urljoin(DEV_SITE, m["icon"]), ICON_DIR / file)
         keep.add(file)
         # Content hash in the URL busts GitHub/browser caches when an icon changes.
