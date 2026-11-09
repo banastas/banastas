@@ -17,7 +17,6 @@
 <a href="https://flatline.banast.as"><img src="assets/icons/flatline.png?v=af06813a" alt="flatline" title="flatline&#10;&#10;Green traces keep time&#10;three quiet signals reveal&#10;the pulse of your Mac." width="58"></a>
 <a href="https://freeside.banast.as"><img src="assets/icons/freeside.png?v=37c6e995" alt="freeside" title="freeside&#10;&#10;Drives fill, then won't go&#10;freeside names who holds the disk&#10;eject, and walk free." width="58"></a>
 <a href="https://straylight.banast.as"><img src="assets/icons/straylight.png?v=a0caa013" alt="straylight" title="straylight&#10;&#10;Is it the Wi-Fi?&#10;router and internet pinged&#10;side by side, it knows." width="58"></a>
-<a href="https://whiterose.banast.as"><img src="assets/icons/whiterose.png?v=1b1b5a21" alt="Whiterose" title="Whiterose&#10;&#10;Boxes cross the land&#10;dark-army keeps watch all night&#10;the rose knows it's near." width="58"></a>
 <a href="https://wherewhen.app"><img src="assets/icons/wherewhen.png?v=cc0d538a" alt="Where/When" title="Where/When&#10;&#10;One tap, moment saved&#10;GPS meets calendar&#10;where you were, and when." width="58"></a>
 <a href="https://sensordash.app"><img src="assets/icons/sensordash.png?v=21969bcb" alt="SensorDash" title="SensorDash&#10;&#10;Compass, pressure, sound&#10;analog gauges all spin&#10;your phone laid open." width="58"></a>
 </td>
