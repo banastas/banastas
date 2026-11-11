@@ -7,18 +7,7 @@
 <a href="https://blog.banast.as"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-blog-dark.svg"><img src="assets/head-blog-light.svg" alt="blog.banast.as" height="22"></picture></a><br><a href="https://blog.banast.as/posts/2026-10-20-john-lear-and-the-alien-cover-up/"><img src="assets/blog/2026-10-20-john-lear-and-the-alien-cover-up.jpg" alt="" title="John Lear’s ideas about alien visitors, government agreements, human origins, and why he came to oppose disclosure." width="100%"></a><br><sub>October 20, 2026</sub><br><b>John Lear and the Alien Cover-Up</b>
 </td>
 <td width="33%" valign="top">
-<a href="https://dev.banast.as"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-dev-dark.svg"><img src="assets/head-dev-light.svg" alt="dev.banast.as" height="22"></picture></a><br><a href="https://blit.banast.as"><img src="assets/icons/blit.png?v=e9d7070a" alt="Blit" title="Blit&#10;&#10;Big files cross the sea&#10;many streams, hashed where they land&#10;proven, byte by byte." width="58"></a>
-<a href="https://rune.banast.as"><img src="assets/icons/rune.png?v=7a04a458" alt="Rune" title="Rune&#10;&#10;One scratch file, two Macs&#10;saved as you type, merged, not lost&#10;every keystroke kept." width="58"></a>
-<a href="https://cue.banast.as"><img src="assets/icons/cue.png?v=f5110d82" alt="Cue" title="Cue&#10;&#10;Records find their voice&#10;colored signals trace the sound&#10;every bit arrives." width="58"></a>
-<a href="https://rill.banast.as"><img src="assets/icons/rill.png?v=9acad0ae" alt="Rill" title="Rill&#10;&#10;Feeds run like water&#10;save a page, say why you did&#10;keep what's worth keeping." width="58"></a>
-<a href="https://x.banast.as"><img src="assets/icons/x-for-macos.png?v=531a00bb" alt="X for macOS" title="X for macOS&#10;&#10;X in its own frame&#10;timelines refresh on cue&#10;pull to start anew." width="58"></a>
-<a href="https://proxyforge.app"><img src="assets/icons/proxyforge.png?v=b28ddaf9" alt="ProxyForge" title="ProxyForge&#10;&#10;Heavy files made light&#10;the batch hums, proxies align&#10;timecode intact." width="58"></a>
-<a href="https://paletteframe.app"><img src="assets/icons/paletteframe.png?v=3548434b" alt="PaletteFrame" title="PaletteFrame&#10;&#10;Colors from the scene&#10;K-means pulls the palette out&#10;frames become a swatch." width="58"></a>
-<a href="https://flatline.banast.as"><img src="assets/icons/flatline.png?v=af06813a" alt="flatline" title="flatline&#10;&#10;Green traces keep time&#10;three quiet signals reveal&#10;the pulse of your Mac." width="58"></a>
-<a href="https://freeside.banast.as"><img src="assets/icons/freeside.png?v=37c6e995" alt="freeside" title="freeside&#10;&#10;Drives fill, then won't go&#10;freeside names who holds the disk&#10;eject, and walk free." width="58"></a>
-<a href="https://straylight.banast.as"><img src="assets/icons/straylight.png?v=a0caa013" alt="straylight" title="straylight&#10;&#10;Is it the Wi-Fi?&#10;router and internet pinged&#10;side by side, it knows." width="58"></a>
-<a href="https://wherewhen.app"><img src="assets/icons/wherewhen.png?v=cc0d538a" alt="Where/When" title="Where/When&#10;&#10;One tap, moment saved&#10;GPS meets calendar&#10;where you were, and when." width="58"></a>
-<a href="https://sensordash.app"><img src="assets/icons/sensordash.png?v=21969bcb" alt="SensorDash" title="SensorDash&#10;&#10;Compass, pressure, sound&#10;analog gauges all spin&#10;your phone laid open." width="58"></a>
+<a href="https://floor1point2.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/head-floor-dark.svg"><img src="assets/head-floor-light.svg" alt="floor1point2.com" height="22"></picture></a><br><a href="https://floor1point2.com"><img src="assets/floor1point2.png" alt="Floor 1.2" title="Floor 1.2" width="100%"></a><br><sub>Floor 1.2<br>Native apps for the Mac and iPhone</sub>
 </td>
 </tr>
 </table>

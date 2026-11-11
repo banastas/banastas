@@ -2,7 +2,7 @@
 <tr>
 {{photo}}
 {{post}}
-{{apps}}
+{{studio}}
 </tr>
 </table>
 

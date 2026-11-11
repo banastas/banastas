@@ -8,9 +8,8 @@ Each placeholder in the template becomes one table cell, so together they
 form a single row:
   {{photo}}  latest frame from photo.banast.as (thumbnailed into assets/photos/)
   {{post}}   latest post from blog.banast.as (hero thumbnailed into assets/blog/)
-  {{apps}}   Mac app icons from dev.banast.as, each linked to the app's site
+  {{studio}} signpost to floor1point2.com: the Floor 1.2 mark, drawn here
 """
-import hashlib
 import html
 import io
 import json
@@ -21,22 +20,25 @@ import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageDraw, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = ROOT / "README.template.md"
 README = ROOT / "README.md"
 PHOTO_DIR = ROOT / "assets" / "photos"
 BLOG_DIR = ROOT / "assets" / "blog"
-ICON_DIR = ROOT / "assets" / "icons"
+STUDIO_IMG = ROOT / "assets" / "floor1point2.png"
 
 PHOTO_FEED = "https://photo.banast.as/rss.xml"
 BLOG_FEED = "https://blog.banast.as/rss.xml"
-DEV_SITE = "https://dev.banast.as/"
+STUDIO_URL = "https://floor1point2.com"
 
 THUMB = (720, 480)  # 3:2, shared by photo and post so the cells line up
-HIDDEN_APPS = {"whiterose"}  # icon stems to leave out of the grid for now
-ICON_SIZE = 58      # display width in px (4 per row in the column); PNGs are stored at 2x
+
+# The Floor 1.2 mark, from Rune/scripts/brand/family-mark.swift: five bars
+# ("##" each, one cell apart), the last one dim, on the HUD's near-black.
+MARK_ROW = "##.##.##.##.::"
+MARK_BG, MARK_BRIGHT, MARK_DIM = (0x0A, 0x0A, 0x0A), (0xF0, 0xF0, 0xF0), (0x4A, 0x4A, 0x4A)
 
 CONTENT_NS = "{http://purl.org/rss/1.0/modules/content/}encoded"
 UA = "banastas-profile-readme (+https://github.com/banastas/banastas)"
@@ -81,19 +83,6 @@ def thumbnail(src_url: str, dest: Path) -> None:
     print(f"  thumbnail {dest.relative_to(ROOT)}")
 
 
-def icon_png(src_url: str, dest: Path) -> None:
-    """Convert a remote app icon to a transparent PNG at 2x display size.
-
-    Always re-fetched (no exists() check) so icon changes on the site show up;
-    git only commits when the bytes differ.
-    """
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    img = Image.open(io.BytesIO(fetch(src_url))).convert("RGBA")
-    img = img.resize((ICON_SIZE * 2, ICON_SIZE * 2), Image.LANCZOS)
-    img.save(dest, "PNG", optimize=True)
-    print(f"  icon {dest.relative_to(ROOT)}")
-
-
 def prune(directory: Path, keep: set, pattern: str) -> None:
     for f in directory.glob(pattern):
         if f.name not in keep:
@@ -101,12 +90,12 @@ def prune(directory: Path, keep: set, pattern: str) -> None:
             print(f"  removed {f.relative_to(ROOT)}")
 
 
-def label(site: str) -> str:
+def label(site: str, host: str = "") -> str:
     """Cell header: the site's wordmark (an SVG from make_headers.py), linked.
 
     GitHub forces its link color on text, so headers are images instead.
     """
-    host = f"{site}.banast.as"
+    host = host or f"{site}.banast.as"
     return (
         f'<a href="https://{host}"><picture>'
         f'<source media="(prefers-color-scheme: dark)" srcset="assets/head-{site}-dark.svg">'
@@ -172,70 +161,47 @@ def post() -> str:
     )
 
 
-def dev_haiku(page: str) -> dict:
-    """Map project URL -> haiku (with line breaks) from dev.banast.as JSON-LD."""
-    found = {}
+def mark(dest: Path) -> None:
+    """Draw the Floor 1.2 mark at THUMB size so it lines up with photo and post.
 
-    def walk(node):
-        if isinstance(node, dict):
-            if "url" in node and "description" in node:
-                found[node["url"].rstrip("/").lower()] = node["description"]
-            for v in node.values():
-                walk(v)
-        elif isinstance(node, list):
-            for v in node:
-                walk(v)
-
-    for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S):
-        try:
-            walk(json.loads(block))
-        except json.JSONDecodeError:
-            pass
-    return found
+    Square cells, a whole number of pixels each, spanning about 62% of the
+    width (the proportion family-mark.swift uses), centred. Deterministic, so
+    redrawing every run leaves git with nothing to commit.
+    """
+    w, h = THUMB
+    cell = int(w * 0.62 / len(MARK_ROW))
+    x0, y0 = (w - cell * len(MARK_ROW)) // 2, (h - cell) // 2
+    img = Image.new("RGB", THUMB, MARK_BG)
+    px = ImageDraw.Draw(img)
+    for i, ch in enumerate(MARK_ROW):
+        if ch != ".":
+            x = x0 + i * cell
+            px.rectangle([x, y0, x + cell - 1, y0 + cell - 1], fill=MARK_BRIGHT if ch == "#" else MARK_DIM)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    img.save(dest, "PNG", optimize=True)
 
 
-APP_TILE = re.compile(
-    r'<a class="app-tile" href="(?P<url>[^"]+)".*?'
-    r'<img src="(?P<icon>[^"]+)".*?'
-    r'<span class="app-name">(?P<name>[^<]+)</span>',
-    re.S,
-)
+def studio() -> str:
+    """A signpost to the studio the apps moved to.
 
-
-def apps() -> str:
-    page = fetch(DEV_SITE).decode("utf-8", "replace")
-    grids = "".join(re.findall(r'<ul class="app-grid".*?</ul>', page, re.S))
-    if not grids:
-        raise RuntimeError("app grid not found on dev.banast.as")
-    haiku = dev_haiku(page)
-
-    links, keep, seen = [], set(), set()
-    for m in APP_TILE.finditer(grids):
-        url, name = m["url"], html.unescape(m["name"]).strip()
-        if url in seen:
-            continue
-        seen.add(url)
-        stem = Path(urllib.parse.urlparse(m["icon"]).path).stem
-        if stem in HIDDEN_APPS:
-            continue
-        file = safe_name(stem, ".png")
-        icon_png(urllib.parse.urljoin(DEV_SITE, m["icon"]), ICON_DIR / file)
-        keep.add(file)
-        # Content hash in the URL busts GitHub/browser caches when an icon changes.
-        ver = hashlib.sha1((ICON_DIR / file).read_bytes()).hexdigest()[:8]
-        verse = haiku.get(url.rstrip("/").lower(), "")
-        tip = esc(name + ("\n\n" + verse if verse else "")).replace("\n", "&#10;")
-        links.append(f'<a href="{esc(url)}"><img src="assets/icons/{file}?v={ver}" alt="{esc(name)}" title="{tip}" width="{ICON_SIZE}"></a>')
-    prune(ICON_DIR, keep, "*.png")
-
-    return cell(label("dev") + "\n".join(links))
+    Header and mark link there; the caption stays plain text because GitHub
+    forces its link color on linked text, which would set it apart from the
+    photo and post captions.
+    """
+    mark(STUDIO_IMG)
+    link = f'<a href="{STUDIO_URL}">'
+    return cell(
+        label("floor", "floor1point2.com")
+        + f'{link}<img src="assets/{STUDIO_IMG.name}" alt="Floor 1.2" title="Floor 1.2" width="100%"></a>'
+        + "<br><sub>Floor 1.2<br>Native apps for the Mac and iPhone</sub>"
+    )
 
 
 # ---- main ------------------------------------------------------------------
 
 def main() -> None:
     out = TEMPLATE.read_text()
-    for key, build in (("photo", photo), ("post", post), ("apps", apps)):
+    for key, build in (("photo", photo), ("post", post), ("studio", studio)):
         print(f"{key}…")
         out = out.replace("{{" + key + "}}", build())
 

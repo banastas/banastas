@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the column headers as SVGs, in dark and light variants:
 
-  assets/head-{site}-{theme}.svg   ("photo" bright + ".banast.as" dimmed)
+  assets/head-{slug}-{theme}.svg   ("photo" bright + ".banast.as" dimmed)
 
 GitHub forces its own link color on text, so the headers are drawn as images
 in Mona Sans (GitHub's interface font) and GitHub's own text colors. They
@@ -20,8 +20,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets"
 
-SITES = ["photo", "blog", "dev"]
-DOMAIN = ".banast.as"
+# slug (file name) -> (bright part, dimmed part)
+SITES = {
+    "photo": ("photo", ".banast.as"),
+    "blog": ("blog", ".banast.as"),
+    "floor": ("floor1point2", ".com"),
+}
 
 # GitHub's foreground and muted text colors per theme.
 THEMES = {
@@ -46,22 +50,22 @@ def font_b64(family: str, text: str) -> str:
     return base64.b64encode(data).decode()
 
 
-def header(site: str, theme: str, font: str) -> str:
+def header(name: str, domain: str, theme: str, font: str) -> str:
     t = THEMES[theme]
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-label="{site}{DOMAIN}">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="{WIDTH}" height="{HEIGHT}" role="img" aria-label="{name}{domain}">
 <defs><style>@font-face{{font-family:"Mona";font-weight:{WEIGHT};src:url(data:font/woff2;base64,{font}) format("woff2");}}</style></defs>
-<text x="0" y="{BASELINE}" font-family="Mona,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="{SIZE}" font-weight="{WEIGHT}" fill="{t['fg']}">{site}<tspan fill="{t['muted']}">{DOMAIN}</tspan></text>
+<text x="0" y="{BASELINE}" font-family="Mona,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="{SIZE}" font-weight="{WEIGHT}" fill="{t['fg']}">{name}<tspan fill="{t['muted']}">{domain}</tspan></text>
 </svg>
 """
 
 
 def main() -> None:
     OUT.mkdir(exist_ok=True)
-    font = font_b64(f"Mona Sans:wght@{WEIGHT}", "".join(SITES) + DOMAIN)
+    font = font_b64(f"Mona Sans:wght@{WEIGHT}", "".join(a + b for a, b in SITES.values()))
     for theme in THEMES:
-        for site in SITES:
-            path = OUT / f"head-{site}-{theme}.svg"
-            path.write_text(header(site, theme, font))
+        for slug, (name, domain) in SITES.items():
+            path = OUT / f"head-{slug}-{theme}.svg"
+            path.write_text(header(name, domain, theme, font))
             print(f"wrote {path.relative_to(ROOT)} ({path.stat().st_size:,} bytes)")
 
 
